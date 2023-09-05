@@ -13,16 +13,13 @@ export default function initButtons(handleUserAction) {
     if (target.classList.contains("left-btn")) {
       toggleHighlighted(selectedIcon, false);
       selectedIcon = (2 + selectedIcon) % ICONS.length;
-      console.log("selectedIcon", selectedIcon);
       toggleHighlighted(selectedIcon, true);
     } else if (target.classList.contains("right-btn")) {
       toggleHighlighted(selectedIcon, false);
       selectedIcon = (1 + selectedIcon) % ICONS.length;
       toggleHighlighted(selectedIcon, true);
-      console.log("selectedIcon", selectedIcon);
     } else {
       handleUserAction(ICONS[selectedIcon]);
-      console.log("selectedIcon", selectedIcon);
     }
   }
 
